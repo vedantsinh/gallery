@@ -1,6 +1,6 @@
 
 /*
- *		This file contains the javascript code for our gallery
+ *		This file contains the javascript code for gallery
  */
 
 // variables for all of the templates so we only have to compile
@@ -12,8 +12,7 @@ var albums_template, photos_template, photo_template, slideshow_template;
 var current_album = gallery.albums[0];
 var current_photo = current_album.photos[0];
 
-// a helper function that instantiates a template
-// and displays the results in the content div
+
 function showTemplate(template, data){
 	var html    = template(data);
 	$('#content').html(html);
@@ -57,19 +56,10 @@ $(document).ready(function(){
 		// add a click callback to each album 
 		// thumbnail which displays the photos
 		// template on that album
-		// (I have written out the code for this 
-		// function for clarity but it is actually
-		// pretty much the same as the photos tab
-		// function so we could acutally just
-		// call $(".photo-thumbnail").click() ) 
+		
 		$(".album-thumbnail").click(function (){
 			
-			// get the index (position in the array)
-			// of the album we clicked on
-			// "this" is the element that was clicked on
-			// data("id") gets the attribute data-id
-			// (which we set to the index of the album in
-			// the array - @index)
+			
 			var index = $(this).data("id");
 
 			// set the current album to this album
@@ -81,12 +71,7 @@ $(document).ready(function(){
 			// add an on click al all the photo thumbnails
 			// which displays the photo in a modal popup
 			$(".photo-thumbnail").click(function (){
-				// get the index (position in the array)
-				// of the photo we clicked on
-				// "this" is the element that was clicked on
-				// data("id") gets the attribute data-id
-				// (which we set to the index of the photo in
-				// the array - @index)
+				
 				var index = $(this).data("id");
 
 				// set the current photo to this photo
@@ -116,12 +101,7 @@ $(document).ready(function(){
 		// add an on click al all the photo thumbnails
 		// which displays the photo in a modal popup
 		$(".photo-thumbnail").click(function (){
-			// get the index (position in the array)
-			// of the photo we clicked on
-			// "this" is the element that was clicked on
-			// data("id") gets the attribute data-id
-			// (which we set to the index of the photo in
-			// the array - @index)
+			
 			var index = $(this).data("id");
 
 			// set the current photo to this photo
@@ -148,9 +128,7 @@ $(document).ready(function(){
 		$("#slideshow-tab").addClass("active");
 	});
 
-	// start the page by showing the albums view
-	// we do this by virtually clicking on the 
-	// albums tab
+	
 	$("#albums-tab").click();
 
 });
