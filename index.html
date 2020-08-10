@@ -3,12 +3,12 @@
 
 <html lang="en">
   <head>
-    
+    <!-- use the head section to define meta data and load css and js files -->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gallery</title>
+    <title> Gallery</title>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -22,8 +22,6 @@
     <link href="css/gallery.css" rel="stylesheet">
 
     
-
-
 
   </head>
   <body>
@@ -44,7 +42,9 @@
       <br/><br/>
 
 
-      
+      <!-- the content section is empty and will get filled according to call of the javascript -->
+      <div id="content"  class="container-fluid"  role="main">
+      </div>
   </div> <!-- / container -->
 
 <!-- Here are  Templates -->
@@ -134,7 +134,7 @@
             <div class="item {{#if @first}}active{{/if}}">
              <img class="carousel-img" src="{{src}}" alt=""/> 
             <div class="carousel-caption">
-              
+             
             </div>
           </div> <!-- / carousel item -->
           {{/each}}

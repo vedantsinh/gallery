@@ -1,11 +1,9 @@
 
 /*
- *		This file contains the javascript code for gallery
+ *		This file contains the javascript code for our gallery
  */
 
-// variables for all of the templates so we only have to compile
-// them once on page load and can then use the same compiled 
-// templates many times
+
 var albums_template, photos_template, photo_template, slideshow_template;
 
 // variables to store the current displayed album and photo
@@ -18,14 +16,10 @@ function showTemplate(template, data){
 	$('#content').html(html);
 }
 
-// document read gets called when the whole document
-// is loaded, so we put most of the code that needs to run
-// in here
+
 $(document).ready(function(){
 
-	//
-	// compile all of our templates ready for use
-	//
+	
 	var source   = $("#albums-template").html();
 	albums_template = Handlebars.compile(source);
 	
@@ -53,9 +47,6 @@ $(document).ready(function(){
 		// then make albums tab active
 		$("#albums-tab").addClass("active");
 
-		// add a click callback to each album 
-		// thumbnail which displays the photos
-		// template on that album
 		
 		$(".album-thumbnail").click(function (){
 			
@@ -129,6 +120,7 @@ $(document).ready(function(){
 	});
 
 	
+
 	$("#albums-tab").click();
 
 });
