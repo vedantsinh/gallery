@@ -32,10 +32,10 @@ $(document).ready(function(){
 	source   = $("#slideshow-template").html();
 	slideshow_template = Handlebars.compile(source);
 
-	// 
+	
 	//  clicking on the albums tab shows the 
 	//  thumbnails of all the albums
-	//
+	
 	$("#albums-tab").click(function () {
 
 		// displays the albums template
